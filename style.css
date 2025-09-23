@@ -50,7 +50,7 @@ body {
 
 .book-pic img {
     /* background-color: aqua; */
-    height: 100vh;
+    height: 100%;
     width: 100%;
     margin-top: 1vh;
 }
@@ -72,9 +72,9 @@ body {
 }
 
 .page1-content p {
-    background-color: black;
-    color: white;
+    text-align: center;
     font-size: 16px;
+    padding: 0 40px;
 }
 
 .page1-content a {
@@ -102,21 +102,138 @@ body {
     height: 100vh;
     width: 100%;
     position: relative;
-    background-color: aqua;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 3vw 1vw;
+    padding: 3vw 0;
 }
 
 .elem {
     height: 100%;
     width: 30%;
-    background-color: aquamarine;
+    overflow: hidden;
+    position: relative;
 }
 
 .elem img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
+    scale: 1.2;
+}
+
+.img-dets {
+    height: 50px;
+    width: 75%;
+    position: absolute;
+    background-color: bisque;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.img-dets svg {
+    width: 10px;
+}
+
+.img-dets svg:nth-of-type(2) {
+    width: 30px;
+    height: 30px;
+
+}
+
+.img-expand {
+    height: 250px;
+    width: 75%;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    z-index: 9;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 30px;
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.expand img {
+    height: 9vw;
     object-fit: cover;
+    object-fit: contain;
+
+}
+
+.expand h5 {
+    text-align: center;
+    font-weight: 200;
+    font-size: 12px;
+    padding: 5px 0;
+    text-transform: uppercase;
+    width: 80%;
+
+}
+
+.page3-cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 25px;
+    width: 100%;
+}
+
+.page3subhead {
+    /* width: 80%; */
+    font-size: 4vw;
+    font-weight: 900;
+    font-family: "futura";
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.page3para p {
+    font-size: 18px;
+    padding: 20px 60px;
+
+}
+
+.page3para a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 20px 60px;
+}
+.page3-imgcont-row1 div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@media (max-width:1020px) {
+    #page2 {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 3vw 1vw;
+    }
+
+    .elem {
+        width: 100%;
+    }
+
+    .page1-content h2 {
+        text-align: center;
+    }
 }

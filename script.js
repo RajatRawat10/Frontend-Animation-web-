@@ -1,3 +1,9 @@
+//this is  for the locomotive smoothscroll
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+///func for animation on load
 function loadinganimation() {
     gsap.from("#page1 h1", {
         y: 100,
@@ -23,3 +29,44 @@ function loadinganimation() {
 };
 
 loadinganimation();
+
+function imgdetanimation() {
+    let imgdet = document.querySelectorAll(".img-dets");
+    let imgexpand = document.querySelectorAll(".img-expand");
+
+    imgdet.forEach((det, index) => {
+        const expandEl = imgexpand[index];
+
+        // When mouse enters .img-dets → show
+        det.addEventListener("mouseenter", () => {
+            gsap.to(expandEl, {
+                opacity: 1,
+                duration: 0.3,
+                ease: "power2.out"
+            });
+        });
+
+        // When mouse leaves .img-dets → check if hovering on .img-expand
+        det.addEventListener("mouseleave", (e) => {
+            // If mouse goes to img-expand, do nothing (keep it visible)
+            if (!expandEl.contains(e.relatedTarget)) {
+                gsap.to(expandEl, {
+                    opacity: 0,
+                    duration: 0.3,
+                    ease: "power2.in"
+                });
+            }
+        });
+
+        // When mouse leaves .img-expand → hide
+        expandEl.addEventListener("mouseleave", () => {
+            gsap.to(expandEl, {
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.in"
+            });
+        });
+    });
+
+}
+imgdetanimation();
