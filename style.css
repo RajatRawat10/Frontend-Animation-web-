@@ -5,6 +5,11 @@
 
 }
 
+*::selection {
+    background-color: black;
+    color: #fff;
+}
+
 html,
 body {
     height: 100%;
@@ -15,6 +20,7 @@ body {
     min-height: 100vh;
     width: 100%;
     position: relative;
+
 }
 
 .nav {
@@ -22,6 +28,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 30px;
+    padding-bottom: 20vh;
 }
 
 .nav-head {
@@ -36,13 +43,80 @@ body {
     letter-spacing: -8px;
     text-align: center;
     line-height: 0.9;
-    margin-top: 20vh;
     font-family: "futura";
     text-transform: uppercase;
 
+}
+
+.book-pic img {
+    /* background-color: aqua; */
+    height: 100vh;
+    width: 100%;
+    margin-top: 1vh;
+}
+
+.page1-content {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.page1-content h2 {
+    font-size: 50px;
+    font-family: "futura";
+    text-transform: uppercase;
 
 }
-.book-pic img{
-   width: 40%;
 
+.page1-content p {
+    background-color: black;
+    color: white;
+    font-size: 16px;
+}
+
+.page1-content a {
+    color: black;
+    text-decoration: none;
+    word-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.page1-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    margin-top: 10vh;
+}
+
+.page1-footer h5 {
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3vw 1vw;
+}
+
+.elem {
+    height: 100%;
+    width: 30%;
+    background-color: aquamarine;
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
