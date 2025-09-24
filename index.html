@@ -4,25 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Two Good Co</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div id="main">
-        <div class="nav">
-            <div class="logo">Logo</div>
-            <div class="nav-head">
-                <h5>Shop</h5>
-                <h5>Catering</h5>
-                <h5>Donate</h5>
-                <h5></h5>
-                <h5></h5>
-            </div>
+    <!-- cursor circle -->
+    <div id="cursor"></div>
+    <!-- nav bar -->
+    <div class="nav">
+        <div class="logo">
+            <img src="https://media.licdn.com/dms/image/v2/C4D0BAQFYIW3KiJZvfg/company-logo_200_200/company-logo_200_200/0/1631346469169?e=2147483647&v=beta&t=5NNGGY5zATWJxu_VScuLAPG25OLww-Ooa2R8-D8n7as" alt="">
         </div>
+        <div class="nav-head">
+            <h5>Shop</h5>
+            <h5>Catering</h5>
+            <h5>Donate</h5>
+            <h5></h5>
+            <h5></h5>
+        </div>
+    </div>
+    <!-- main cont -->
+    <div id="main">
+        <!-- page 1 heading till line -->
         <div id="page1">
-            <h1>Change</h1>
+            <h1 class="firsth1">Change</h1>
             <h1>the course</h1>
             <div class="book-pic"> <img src="book img.avif" alt=""></div>
             <div class="page1-content">
@@ -35,9 +42,10 @@
                 <h5>Buy Good</h5>
                 <h5>Do Good</h5>
             </div>
+               <div class="linescale"></div>
         </div>
         <div id="page2">
-
+<!-- page 2 image one full expand & all -->
             <div id="elem1" class="elem">
                 <img data-scroll data-scroll-speed="1" src="Images/EDITED-AB5I5446_PhotoCredit-Nikki-To.jpg" alt="">
                 <div class="img-dets"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -64,7 +72,7 @@
                     </div>
                 </div>
             </div>
-
+<!-- page 2 image two full expand & all -->
             <div id="elem2" class="elem">
                 <img data-scroll data-scroll-speed="1" src="Images/food.avif" alt="">
                 <div class="img-dets">
@@ -92,7 +100,7 @@
                     </div>
                 </div>
             </div>
-
+<!-- page 2 image three full expand & all -->
             <div id="elem3" class="elem">
                 <img data-scroll data-scroll-speed="1" src="Images/Website Slider Slice Images (18).png" alt="">
                 <div class="img-dets">
@@ -122,7 +130,9 @@
 
             </div>
         </div>
+        <!-- page  3 -->
         <div id="page-3">
+            <!-- cont of para -->
             <div class="page3-cont">
                 <div class="page3subhead">
                     We believe in people, until they believe in themselves again.
@@ -140,9 +150,9 @@
                 </div>
             </div>
             <div class="page3-imgcont">
-                <div class="page3-imgcont-row1">
+                <div class="page3-imgcont-row1" class="cursoreve">
                     <div>
-                        <img src="book img.avif" alt="">
+                        <img src="Images/AB5I5869_Sweet_mem_book_NikkiTo-LoRes.png" alt="">
                         <h5>Sweet memories cook book</h5>
                         <h6>$75</h6>
                     </div>
@@ -152,7 +162,7 @@
                         <h6>$169</h6>
                     </div>
                 </div>
-                <div class="page3-imgcont-row2">
+                <div class="page3-imgcont-row2" class="cursoreve">
                     <div>
                         <img src="Images/Donate-a-meal-to-womens-shelter-two-good-co.png" alt="">
                         <h5>donate a meal to a women shelter's</h5>
@@ -165,13 +175,18 @@
                     </div>
                 </div>
             </div>
+            <div class="page3-footer">
+                <div>word of goodness</div>
+                <div>messages of love & support</div>
+            </div>
+            <div class="linescale"></div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
         integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>

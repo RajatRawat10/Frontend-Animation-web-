@@ -29,7 +29,7 @@ function loadinganimation() {
 };
 
 loadinganimation();
-
+//function for image detail expand
 function imgdetanimation() {
     let imgdet = document.querySelectorAll(".img-dets");
     let imgexpand = document.querySelectorAll(".img-expand");
@@ -70,3 +70,32 @@ function imgdetanimation() {
 
 }
 imgdetanimation();
+
+
+document.addEventListener("mousemove", function (e) {
+    gsap.to("#cursor", {
+        left: e.clientX,
+        top: e.clientY,
+        opacity: 1,
+        duration: 0.1, // small duration for smoother motion
+        ease: "power3.out"
+    });
+});
+const cursor = document.querySelector("#cursor");
+const page3 = document.querySelector(".page3-imgcont");
+
+page3.addEventListener("mousemove", function () {
+    gsap.to(cursor, {
+        scale: 1,
+        duration: 0.2,
+        ease: "power3.out"
+    });
+});
+
+page3.addEventListener("mouseleave", function () {
+    gsap.to(cursor, {
+        scale: 0,
+        duration: 0.2,
+        ease: "power3.in"
+    });
+});

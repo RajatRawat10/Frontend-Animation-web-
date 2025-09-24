@@ -16,25 +16,50 @@ body {
     width: 100%;
 }
 
-#page1 {
-    min-height: 100vh;
-    width: 100%;
-    position: relative;
-
+#cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    pointer-events: none; /* so it doesn't block clicks */
+    transform: translate(-50%, -50%) scale(0); /* start hidden */
+    transition: background-color 0.2s ease;
+    z-index: 10000;
 }
+
+
+
 
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px;
-    padding-bottom: 20vh;
+    padding: 0 30px;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  
 }
 
 .nav-head {
     display: flex;
     align-items: center;
     gap: 20px;
+
+}
+
+.logo img {
+    height: 80px;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    /* position: relative; */
 
 }
 
@@ -48,20 +73,23 @@ body {
 
 }
 
+.firsth1 {
+    margin-top: 30vh;
+}
+
 .book-pic img {
-    /* background-color: aqua; */
     height: 100%;
     width: 100%;
     margin-top: 1vh;
 }
 
 .page1-content {
-
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     gap: 3vh;
+
 }
 
 .page1-content h2 {
@@ -89,8 +117,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2vw;
+    margin: auto;
     margin-top: 10vh;
+    width: 95%;
 }
 
 .page1-footer h5 {
@@ -211,11 +240,70 @@ body {
     font-size: 18px;
     padding: 20px 60px;
 }
-.page3-imgcont-row1 div{
+
+.page3-imgcont-row1,
+.page3-imgcont-row2 {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* background-color: red; */
 }
+
+.page3-imgcont-row1 div,
+.page3-imgcont-row2 div {
+    height: 100vh;
+    width: 100%;
+    margin: 20px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.page3-imgcont-row1 div img,
+.page3-imgcont-row2 div img {
+    width: 40vw;
+    cursor: pointer;
+}
+
+.page3-imgcont-row1 div h5,
+.page3-imgcont-row2 div h5 {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.page3-imgcont-row1 div h6,
+.page3-imgcont-row2 div h6 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.page3-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font: 16px;
+    text-transform: uppercase;
+    font-weight: 300;
+    width: 95%;
+    height: 50px;
+    margin: auto;
+    padding-top: 60px;
+
+}
+
+.linescale {
+    width: 95%;
+    height: 1px;
+    background-color: black;
+    margin: auto;
+    padding: 0 30px;
+}
+
 
 @media (max-width:1020px) {
     #page2 {
